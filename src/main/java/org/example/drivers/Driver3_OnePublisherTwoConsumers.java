@@ -23,8 +23,8 @@ public class Driver3_OnePublisherTwoConsumers {
 
         Thread.sleep(2000);
 
-        System.out.println(broker.getConsumerStats("orders", "C1"));
-        System.out.println(broker.getConsumerStats("orders", "C2"));
+        System.out.println(broker.getStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C2"));
 
         c1.stop();
         c2.stop();

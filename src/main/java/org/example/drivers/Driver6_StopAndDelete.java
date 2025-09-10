@@ -24,7 +24,7 @@ public class Driver6_StopAndDelete {
         System.out.println(">>> Deleting topic...");
         broker.deleteTopic("orders");
 
-        // If you try to publish now, it should fail (topic not found)
+       // If trying now, publish will fail
         try {
             p1.publish("msg-2");
         } catch (Exception e) {

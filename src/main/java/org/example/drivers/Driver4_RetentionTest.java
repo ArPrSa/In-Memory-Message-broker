@@ -22,7 +22,7 @@ public class Driver4_RetentionTest {
         Thread.sleep(2000);
 
         System.out.println(">>> Stats after retention:");
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         c1.stop();
         broker.deleteTopic("orders");

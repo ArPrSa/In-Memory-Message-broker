@@ -6,7 +6,7 @@ import org.example.Publisher;
 
 import java.time.Duration;
 
-public class Driver1_SinglePublisherSingleConsumer {
+public class Driver1_SinglePubSingleConsumer {
     public static void main(String[] args) throws InterruptedException {
         Broker broker = new Broker();
         broker.createTopic("orders", Duration.ofSeconds(30));
@@ -20,7 +20,7 @@ public class Driver1_SinglePublisherSingleConsumer {
         p1.publish("msg-3");
 
         Thread.sleep(1000);
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         c1.stop();
         broker.deleteTopic("orders");

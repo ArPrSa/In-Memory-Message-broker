@@ -33,7 +33,7 @@ public class Broker {
         return new Consumer(t, id);
     }
 
-    public String getConsumerStats(String topicName, String consumerId) {
+    public String getStats(String topicName, String consumerId) {
         Topic t = topics.get(topicName);
         if (t == null) return "Topic not found";
         Consumer c = t.getConsumer(consumerId);

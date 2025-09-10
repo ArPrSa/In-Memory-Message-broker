@@ -57,7 +57,7 @@ public class Consumer {
         running = false;
         worker.shutdownNow();
         synchronized (topic) {
-            topic.notifyAll(); // wake thread if waiting
+            topic.notifyAll();
         }
         System.out.printf("Consumer %s stopped%n", id);
     }

@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Driver2_TwoPublishersOneConsume {
+public class Driver2_TwoPubOneConsumer {
     public static void main(String[] args) throws InterruptedException {
         Broker broker = new Broker();
         broker.createTopic("orders", Duration.ofSeconds(30));
@@ -27,7 +27,7 @@ public class Driver2_TwoPublishersOneConsume {
         }
 
         Thread.sleep(2000);
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         c1.stop();
         broker.deleteTopic("orders");

@@ -21,14 +21,14 @@ public class Driver5_ResetOffset {
 
         Thread.sleep(1000);
         System.out.println(">>> Stats before reset:");
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         System.out.println(">>> Resetting offset to 1...");
         c1.resetOffset(1);
 
         Thread.sleep(2000);
         System.out.println(">>> Stats after reset:");
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         c1.stop();
         broker.deleteTopic("orders");

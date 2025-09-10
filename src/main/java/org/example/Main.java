@@ -24,13 +24,13 @@ public class Main {
 
         Thread.sleep(2000);
 
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         System.out.println("Resetting offset to 2...");
         c1.resetOffset(2);
 
         Thread.sleep(2000);
-        System.out.println(broker.getConsumerStats("orders", "C1"));
+        System.out.println(broker.getStats("orders", "C1"));
 
         // Stop consumer and delete topic
         c1.stop();
